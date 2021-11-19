@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-
-
 joinByChar() {
   local IFS="$1"
   shift
@@ -34,4 +32,5 @@ export FLATPAK_DEFAULT_USER_APPS=(
 
 TO_INSTALL=$(joinByChar ' ' "${FLATPAK_DEFAULT_USER_APPS[@]}")
 
+# Installs packages
 flatpak install -y "$TO_INSTALL"
